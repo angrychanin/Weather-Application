@@ -45,10 +45,6 @@ header a {
   text-decoration: none;
 }
 
-.about {
-  min-height: 85vh;
-}
-
 #message-1 {
   font-size: 30px;
   font-weight: 600;
@@ -536,7 +532,7 @@ button {
 }
 
 .s130 {
-  min-height: 85vh;
+  min-height: 100vh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
