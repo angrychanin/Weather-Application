@@ -15,24 +15,20 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 app.get("/weather", (req, res) => {
-  location(req.query.address, (err, { latitude, longtitude, name }) => {
-    if (err) {
+  location(req.query.address, (error, { latitude, longtitude, name } = {}) => {
+    if (error) {
       return res.send({ error });
     }
-    forecast(
-      latitude,
-      longtitude,
-      (err, { forecast = "-", icon = "-" } = {}) => {
-        if (err) {
-          return res.send({ error });
-        }
-        res.send({
-          forecast: forecast,
-          location: name,
-          icon: icon,
-        });
+    forecast(latitude, longtitude, (error, { forecast, icon }) => {
+      if (error) {
+        return res.send({ error });
       }
-    );
+      res.send({
+        forecast: forecast,
+        location: name,
+        icon: icon,
+      });
+    });
   });
 });
 
