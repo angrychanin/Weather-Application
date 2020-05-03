@@ -45,6 +45,6 @@ app.get("/*", (req, res) => {
 });
 
 //PORT
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Connect to Weather Application Server");
 });
