@@ -11,7 +11,7 @@ app.use(express.static(publicDirectoryPath));
 
 //ROUTES
 
-app.get("/index", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index");
 });
 app.get("/weather", (req, res) => {
