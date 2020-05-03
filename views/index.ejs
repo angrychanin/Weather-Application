@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('../views/partials/header'); -%>
+    <!-- <p id="message-3"></p> -->
+    <div class="container main">
+      <div class="main-content">
+        <h2 class="d-flex flex-column justify-content-center">
+          Please insert location!
+        </h2>
+
+        <form>
+          <input placeholder="Location" />
+          <button>Search</button>
+        </form>
+
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+      </div>
+    </div>
+    <script type="text/javascript" src="/js/app.js"></script>
+    <%- include('../views/partials/footer'); -%>
+  </body>
+</html>
